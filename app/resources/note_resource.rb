@@ -1,6 +1,7 @@
 class NoteResource < ApplicationResource
-  attribute :notable_id, :integer, only: [:filterable]
+  attribute :notable_id, :integer
   attribute :body, :string
+  attribute :notable_type, :string
 
   filter :notable_type, :string, allow: %w(Employee Department Team)
 
